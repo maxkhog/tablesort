@@ -54,7 +54,7 @@ export default class index extends Component {
     }
   
     const changeColumn = columns.map((e, i) =>
-      ({ ...e, sort: i == id ? currentSortMethod : 'default' })
+      ({ ...e, sort: i === id ? currentSortMethod : 'default' })
     );
   
     const sortData = sortMultidimensionalArrayFunc(data, id, currentSortMethod);
@@ -64,6 +64,4 @@ export default class index extends Component {
       columns: changeColumn,
     });
   }
-
-
 }
